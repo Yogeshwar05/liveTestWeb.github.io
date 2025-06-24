@@ -1,497 +1,679 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>About Us | Our Startup</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
     <style>
-        :root {
-            --primary: #5E3E30;
-            --secondary: #C4A1A1;
-            --light: #FEF4F1;
-            --accent: #FFE4DA;
+      :root {
+        --primary: #5e3e30;
+        --secondary: #c4a1a1;
+        --light: #fef4f1;
+        --accent: #ffe4da;
+      }
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      }
+
+      body {
+        background-color: var(--light);
+        color: var(--primary);
+        line-height: 1.6;
+      }
+
+      header {
+        background: linear-gradient(
+          135deg,
+          var(--accent) 0%,
+          var(--light) 100%
+        );
+        padding: 2rem 1rem;
+        text-align: center;
+        position: relative;
+        overflow: hidden;
+      }
+      nav {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background-color: var(--accent);
+        padding: 1rem 2rem;
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      }
+
+      .logo {
+        width: 30px; /* Placeholder for logo */
+        height: 30px; /* Placeholder for logo */
+        background-color: var(--secondary); /* Placeholder color */
+        margin-right: 1rem;
+      }
+
+      .navbar-title {
+        font-size: 1.5rem;
+        color: var(--primary);
+        font-weight: bold;
+      }
+
+      .continue-booking {
+        background-color: var(--primary);
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 1rem;
+        transition: background-color 0.3s ease;
+      }
+
+      .continue-booking:hover {
+        background-color: var(--secondary);
+      }
+
+      /* Responsive Styles */
+      @media (max-width: 768px) {
+        nav {
+          flex-direction: row;
+          align-items: flex-start;
+          padding: 1rem;
         }
-        
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+        .navbar-title {
+          font-size: 1.2rem;
         }
-        
-        body {
-            background-color: var(--light);
-            color: var(--primary);
-            line-height: 1.6;
+
+        .logo {
+          width: 40px; /* Adjust logo size for smaller screens */
+          height: 40px;
         }
-        
+
+        .continue-booking {
+          font-size: 0.9rem;
+        }
+      }
+
+      @media (max-width: 480px) {
+        .navbar-title {
+          font-size: 1rem;
+        }
+
+        .logo {
+          width: 30px; /* Further adjust logo size for mobile */
+          height: 30px;
+        }
+      }
+      .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 20px;
+      }
+
+      h1 {
+        font-size: 2.5rem;
+        margin-bottom: 1rem;
+        color: var(--primary);
+        font-weight: 700;
+      }
+
+      h2 {
+        font-size: 2rem;
+        margin-bottom: 1.5rem;
+        color: var(--primary);
+        position: relative;
+        display: inline-block;
+      }
+
+      h2:after {
+        content: "";
+        position: absolute;
+        bottom: -10px;
+        left: 0;
+        width: 60px;
+        height: 4px;
+        background-color: var(--secondary);
+      }
+
+      p {
+        font-size: 1rem;
+        margin-bottom: 1.5rem;
+      }
+
+      .btn {
+        display: inline-block;
+        background-color: var(--secondary);
+        color: white;
+        padding: 10px 25px;
+        border-radius: 50px;
+        text-decoration: none;
+        font-weight: 600;
+        transition: all 0.3s ease;
+        border: 2px solid var(--secondary);
+        font-size: 1rem;
+      }
+
+      .btn:hover {
+        background-color: transparent;
+        color: var(--secondary);
+      }
+
+      /* Hero Section */
+      .hero {
+        padding: 3rem 0;
+      }
+
+      .hero p {
+        max-width: 700px;
+        margin: 0 auto 1.5rem;
+        font-size: 1.1rem;
+      }
+
+      /* Team Section */
+      .team {
+        padding: 3rem 0;
+        background-color: white;
+      }
+
+      .team-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 20px;
+        margin-top: 2rem;
+      }
+
+      .team-member {
+        background-color: var(--light);
+        border-radius: 10px;
+        overflow: hidden;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease;
+        text-align: center;
+      }
+
+      .team-member:hover {
+        transform: translateY(-5px);
+      }
+
+      .member-img {
+        height: 200px;
+        background-color: var(--accent);
+        position: relative;
+      }
+
+      .member-img img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      .member-info {
+        padding: 1.2rem;
+      }
+
+      .member-info h3 {
+        margin-bottom: 0.5rem;
+        color: var(--primary);
+        font-size: 1.2rem;
+      }
+
+      .member-info p.position {
+        color: var(--secondary);
+        font-weight: 600;
+        margin-bottom: 0.8rem;
+        font-size: 0.9rem;
+      }
+
+      .member-info p {
+        font-size: 0.9rem;
+      }
+
+      .social-links {
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+      }
+
+      .social-links a {
+        color: var(--primary);
+        transition: color 0.3s ease;
+        font-size: 1rem;
+      }
+
+      .social-links a:hover {
+        color: var(--secondary);
+      }
+
+      /* Values Section */
+      .values {
+        padding: 3rem 0;
+        background: linear-gradient(
+          135deg,
+          var(--accent) 0%,
+          var(--light) 100%
+        );
+      }
+
+      .values-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 20px;
+        margin-top: 2rem;
+      }
+
+      .value-card {
+        background-color: white;
+        border-radius: 10px;
+        padding: 1.5rem;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        transition: transform 0.3s ease;
+      }
+
+      .value-card:hover {
+        transform: translateY(-5px);
+      }
+
+      .value-icon {
+        font-size: 2rem;
+        color: var(--secondary);
+        margin-bottom: 0.8rem;
+      }
+
+      .value-card h3 {
+        margin-bottom: 0.8rem;
+        font-size: 1.2rem;
+      }
+
+      .value-card p {
+        font-size: 0.9rem;
+      }
+
+      /* CTA Section */
+      .cta {
+        padding: 3rem 0;
+        text-align: center;
+        background-color: var(--primary);
+        color: white;
+      }
+
+      .cta h2 {
+        color: white;
+      }
+
+      .cta h2:after {
+        background-color: white;
+      }
+
+      .cta .btn {
+        background-color: white;
+        color: var(--primary);
+        margin-top: 1rem;
+      }
+
+      .cta .btn:hover {
+        background-color: transparent;
+        color: white;
+        border-color: white;
+      }
+
+      /* Animation */
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+          transform: translateY(20px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      .fade-in {
+        animation: fadeIn 0.8s ease forwards;
+      }
+
+      .delay-1 {
+        animation-delay: 0.2s;
+      }
+      .delay-2 {
+        animation-delay: 0.4s;
+      }
+      .delay-3 {
+        animation-delay: 0.6s;
+      }
+      .delay-4 {
+        animation-delay: 0.8s;
+      }
+
+      /* Responsive Adjustments */
+      @media (min-width: 768px) {
         header {
-            background: linear-gradient(135deg, var(--accent) 0%, var(--light) 100%);
-            padding: 2rem 1rem;
-            text-align: center;
-            position: relative;
-            overflow: hidden;
+          padding: 3rem 2rem;
         }
-        
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-        
+
         h1 {
-            font-size: 2.5rem;
-            margin-bottom: 1rem;
-            color: var(--primary);
-            font-weight: 700;
+          font-size: 3rem;
         }
-        
+
         h2 {
-            font-size: 2rem;
-            margin-bottom: 1.5rem;
-            color: var(--primary);
-            position: relative;
-            display: inline-block;
+          font-size: 2.2rem;
         }
-        
-        h2:after {
-            content: '';
-            position: absolute;
-            bottom: -10px;
-            left: 0;
-            width: 60px;
-            height: 4px;
-            background-color: var(--secondary);
-        }
-        
+
         p {
-            font-size: 1rem;
-            margin-bottom: 1.5rem;
+          font-size: 1.1rem;
         }
-        
+
         .btn {
-            display: inline-block;
-            background-color: var(--secondary);
-            color: white;
-            padding: 10px 25px;
-            border-radius: 50px;
-            text-decoration: none;
-            font-weight: 600;
-            transition: all 0.3s ease;
-            border: 2px solid var(--secondary);
-            font-size: 1rem;
+          padding: 12px 30px;
+          font-size: 1.1rem;
         }
-        
-        .btn:hover {
-            background-color: transparent;
-            color: var(--secondary);
-        }
-        
-        /* Hero Section */
-        .hero {
-            padding: 3rem 0;
-        }
-        
-        .hero p {
-            max-width: 700px;
-            margin: 0 auto 1.5rem;
-            font-size: 1.1rem;
-        }
-        
-        /* Team Section */
-        .team {
-            padding: 3rem 0;
-            background-color: white;
-        }
-        
-        .team-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 20px;
-            margin-top: 2rem;
-        }
-        
-        .team-member {
-            background-color: var(--light);
-            border-radius: 10px;
-            overflow: hidden;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s ease;
-            text-align: center;
-        }
-        
-        .team-member:hover {
-            transform: translateY(-5px);
-        }
-        
-        .member-img {
-            height: 200px;
-            background-color: var(--accent);
-            position: relative;
-        }
-        
-        .member-img img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-        
-        .member-info {
-            padding: 1.2rem;
-        }
-        
-        .member-info h3 {
-            margin-bottom: 0.5rem;
-            color: var(--primary);
-            font-size: 1.2rem;
-        }
-        
-        .member-info p.position {
-            color: var(--secondary);
-            font-weight: 600;
-            margin-bottom: 0.8rem;
-            font-size: 0.9rem;
-        }
-        
-        .member-info p {
-            font-size: 0.9rem;
-        }
-        
-        .social-links {
-            display: flex;
-            justify-content: center;
-            gap: 10px;
-        }
-        
-        .social-links a {
-            color: var(--primary);
-            transition: color 0.3s ease;
-            font-size: 1rem;
-        }
-        
-        .social-links a:hover {
-            color: var(--secondary);
-        }
-        
-        /* Values Section */
-        .values {
-            padding: 3rem 0;
-            background: linear-gradient(135deg, var(--accent) 0%, var(--light) 100%);
-        }
-        
-        .values-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 20px;
-            margin-top: 2rem;
-        }
-        
-        .value-card {
-            background-color: white;
-            border-radius: 10px;
-            padding: 1.5rem;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
-            transition: transform 0.3s ease;
-        }
-        
-        .value-card:hover {
-            transform: translateY(-5px);
-        }
-        
-        .value-icon {
-            font-size: 2rem;
-            color: var(--secondary);
-            margin-bottom: 0.8rem;
-        }
-        
-        .value-card h3 {
-            margin-bottom: 0.8rem;
-            font-size: 1.2rem;
-        }
-        
-        .value-card p {
-            font-size: 0.9rem;
-        }
-        
-        /* CTA Section */
+
+        .hero,
+        .team,
+        .values,
         .cta {
-            padding: 3rem 0;
-            text-align: center;
-            background-color: var(--primary);
-            color: white;
+          padding: 4rem 0;
         }
-        
-        .cta h2 {
-            color: white;
+
+        .team-grid,
+        .values-grid {
+          gap: 30px;
         }
-        
-        .cta h2:after {
-            background-color: white;
+
+        .member-img {
+          height: 250px;
         }
-        
-        .cta .btn {
-            background-color: white;
-            color: var(--primary);
-            margin-top: 1rem;
+
+        .value-icon {
+          font-size: 2.5rem;
         }
-        
-        .cta .btn:hover {
-            background-color: transparent;
-            color: white;
-            border-color: white;
+      }
+
+      @media (min-width: 992px) {
+        h1 {
+          font-size: 3.5rem;
         }
-        
-        /* Animation */
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(20px); }
-            to { opacity: 1; transform: translateY(0); }
+
+        h2 {
+          font-size: 2.5rem;
         }
-        
-        .fade-in {
-            animation: fadeIn 0.8s ease forwards;
+
+        .hero,
+        .team,
+        .values,
+        .cta {
+          padding: 5rem 0;
         }
-        
-        .delay-1 { animation-delay: 0.2s; }
-        .delay-2 { animation-delay: 0.4s; }
-        .delay-3 { animation-delay: 0.6s; }
-        .delay-4 { animation-delay: 0.8s; }
-        
-        /* Responsive Adjustments */
-        @media (min-width: 768px) {
-            header {
-                padding: 3rem 2rem;
-            }
-            
-            h1 {
-                font-size: 3rem;
-            }
-            
-            h2 {
-                font-size: 2.2rem;
-            }
-            
-            p {
-                font-size: 1.1rem;
-            }
-            
-            .btn {
-                padding: 12px 30px;
-                font-size: 1.1rem;
-            }
-            
-            .hero, .team, .values, .cta {
-                padding: 4rem 0;
-            }
-            
-            .team-grid, .values-grid {
-                gap: 30px;
-            }
-            
-            .member-img {
-                height: 250px;
-            }
-            
-            .value-icon {
-                font-size: 2.5rem;
-            }
+      }
+
+      @media (max-width: 480px) {
+        h1 {
+          font-size: 2rem;
         }
-        
-        @media (min-width: 992px) {
-            h1 {
-                font-size: 3.5rem;
-            }
-            
-            h2 {
-                font-size: 2.5rem;
-            }
-            
-            .hero, .team, .values, .cta {
-                padding: 5rem 0;
-            }
+
+        h2 {
+          font-size: 1.5rem;
         }
-        
-        @media (max-width: 480px) {
-            h1 {
-                font-size: 2rem;
-            }
-            
-            h2 {
-                font-size: 1.5rem;
-            }
-            
-            h2:after {
-                width: 40px;
-                height: 3px;
-                bottom: -8px;
-            }
-            
-            .hero, .team, .values, .cta {
-                padding: 2rem 0;
-            }
-            
-            .team-grid, .values-grid {
-                grid-template-columns: 1fr;
-            }
-            
-            .member-img {
-                height: 180px;
-            }
+
+        h2:after {
+          width: 40px;
+          height: 3px;
+          bottom: -8px;
         }
+
+        .hero,
+        .team,
+        .values,
+        .cta {
+          padding: 2rem 0;
+        }
+
+        .team-grid,
+        .values-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .member-img {
+          height: 180px;
+        }
+      }
     </style>
-</head>
-<body>
+  </head>
+  <body>
+     <nav>
+        <div style="display: flex; align-items: center;">
+            <div class="logo"></div>
+            <div class="navbar-title">Nexture</div>
+        </div>
+        <button class="continue-booking">Continue Booking</button>
+    </nav>
     <!-- Header with decorative elements -->
     <header class="fade-in">
-        <div class="container">
-            <h1>About Our Startup</h1>
-            <p>Innovating with purpose, designing with passion</p>
-        </div>
-        <div class="deco-circle" style="position: absolute; top: -50px; right: -50px; width: 200px; height: 200px; background-color: var(--secondary); border-radius: 50%; opacity: 0.2;"></div>
-        <div class="deco-circle" style="position: absolute; bottom: -100px; left: -50px; width: 300px; height: 300px; background-color: var(--accent); border-radius: 50%; opacity: 0.2;"></div>
+      <div class="container">
+        <h1>About Us</h1>
+        <p>
+          Nexture – Quality You Expect. Convenience You Deserve.
+          At Your Doorstep
+        </p>
+      </div>
+      <div
+        class="deco-circle"
+        style="
+          position: absolute;
+          top: -50px;
+          right: -50px;
+          width: 200px;
+          height: 200px;
+          background-color: var(--secondary);
+          border-radius: 50%;
+          opacity: 0.2;
+        "
+      ></div>
+      <div
+        class="deco-circle"
+        style="
+          position: absolute;
+          bottom: -100px;
+          left: -50px;
+          width: 300px;
+          height: 300px;
+          background-color: var(--accent);
+          border-radius: 50%;
+          opacity: 0.2;
+        "
+      ></div>
     </header>
-    
+
     <!-- Hero Section -->
     <section class="hero">
-        <div class="container fade-in delay-1">
-            <h2>Our Story</h2>
-            <p>Founded in 2023, our startup began as a small team of passionate individuals with a shared vision to revolutionize the industry. What started as an idea shared over coffee has grown into a thriving company serving clients worldwide.</p>
-            <p>We believe that innovation shouldn't come at the cost of human connection. Our approach combines cutting-edge technology with thoughtful design to create solutions that people love to use.</p>
-        </div>
+      <div class="container fade-in delay-1">
+        <h2>Who we are</h2>
+        <p>
+          Nexture is a new-age, technology-first service platform
+          revolutionizing the way urban households access everyday services. We
+          connect customers to a curated network of trained and
+          background-verified professionals across categories such as home
+          cleaning, beauty at home, appliance repair, plumbing, electrical work,
+          and more — all available at the tap of a button or a simple WhatsApp
+          message.
+        </p>
+        <p>
+          Our mission is simple: to make professional-grade services as
+          seamless, affordable, and trustworthy — while empowering service
+          providers with fair earnings, performance-based growth, and continuous
+          training.
+        </p>
+        <p>
+          We’re not just building a service marketplace — we’re building the
+          future lifestyle infrastructure of every modern home.
+        </p>
+      </div>
     </section>
-    
+
     <!-- Team Section -->
     <section class="team">
-        <div class="container">
-            <h2 class="fade-in">Meet The Team</h2>
-            <div class="team-grid">
-                <!-- Team Member 1 -->
-                <div class="team-member fade-in delay-1">
-                    <div class="member-img">
-                        <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80" alt="Team Member">
-                    </div>
-                    <div class="member-info">
-                        <h3>Alex Johnson</h3>
-                        <p class="position">CEO & Founder</p>
-                        <p>Visionary leader with 10+ years in the industry.</p>
-                        <div class="social-links">
-                            <a href="#"><i class="fab fa-linkedin"></i></a>
-                            <a href="#"><i class="fab fa-twitter"></i></a>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Team Member 2 -->
-                <div class="team-member fade-in delay-2">
-                    <div class="member-img">
-                        <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=688&q=80" alt="Team Member">
-                    </div>
-                    <div class="member-info">
-                        <h3>Sarah Chen</h3>
-                        <p class="position">Lead Designer</p>
-                        <p>Crafting beautiful, intuitive user experiences.</p>
-                        <div class="social-links">
-                            <a href="#"><i class="fab fa-dribbble"></i></a>
-                            <a href="#"><i class="fab fa-behance"></i></a>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Team Member 3 -->
-                <div class="team-member fade-in delay-3">
-                    <div class="member-img">
-                        <img src="https://images.unsplash.com/photo-1568602471122-7832951cc4c5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" alt="Team Member">
-                    </div>
-                    <div class="member-info">
-                        <h3>Michael Rodriguez</h3>
-                        <p class="position">CTO</p>
-                        <p>Building robust, scalable technology solutions.</p>
-                        <div class="social-links">
-                            <a href="#"><i class="fab fa-github"></i></a>
-                            <a href="#"><i class="fab fa-twitter"></i></a>
-                        </div>
-                    </div>
-                </div>
+      <div class="container">
+        <h2 class="fade-in">Meet The Team</h2>
+        <div class="team-grid">
+          <!-- Team Member 1 -->
+          <div class="team-member fade-in delay-1">
+            <div class="member-img">
+              <img
+                src="https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80"
+                alt="Team Member"
+              />
             </div>
+            <div class="member-info">
+              <h3>Alex Johnson</h3>
+              <p class="position">CEO & Founder</p>
+              <p>Visionary leader with 10+ years in the industry.</p>
+              <div class="social-links">
+                <a href="#"><i class="fab fa-linkedin"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Team Member 2 -->
+          <div class="team-member fade-in delay-2">
+            <div class="member-img">
+              <img
+                src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=688&q=80"
+                alt="Team Member"
+              />
+            </div>
+            <div class="member-info">
+              <h3>Sarah Chen</h3>
+              <p class="position">Lead Designer</p>
+              <p>Crafting beautiful, intuitive user experiences.</p>
+              <div class="social-links">
+                <a href="#"><i class="fab fa-dribbble"></i></a>
+                <a href="#"><i class="fab fa-behance"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Team Member 3 -->
+          <div class="team-member fade-in delay-3">
+            <div class="member-img">
+              <img
+                src="https://images.unsplash.com/photo-1568602471122-7832951cc4c5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80"
+                alt="Team Member"
+              />
+            </div>
+            <div class="member-info">
+              <h3>Michael Rodriguez</h3>
+              <p class="position">CTO</p>
+              <p>Building robust, scalable technology solutions.</p>
+              <div class="social-links">
+                <a href="#"><i class="fab fa-github"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+              </div>
+            </div>
+          </div>
         </div>
+      </div>
     </section>
-    
+
     <!-- Values Section -->
     <section class="values">
-        <div class="container">
-            <h2 class="fade-in">Our Core Values</h2>
-            <div class="values-grid">
-                <!-- Value 1 -->
-                <div class="value-card fade-in delay-1">
-                    <div class="value-icon">
-                        <i class="fas fa-lightbulb"></i>
-                    </div>
-                    <h3>Innovation</h3>
-                    <p>We challenge conventional thinking and push boundaries to create breakthrough solutions that make a real difference.</p>
-                </div>
-                
-                <!-- Value 2 -->
-                <div class="value-card fade-in delay-2">
-                    <div class="value-icon">
-                        <i class="fas fa-hand-holding-heart"></i>
-                    </div>
-                    <h3>Integrity</h3>
-                    <p>We do what's right, not what's easy. Honesty and transparency guide every decision we make.</p>
-                </div>
-                
-                <!-- Value 3 -->
-                <div class="value-card fade-in delay-3">
-                    <div class="value-icon">
-                        <i class="fas fa-users"></i>
-                    </div>
-                    <h3>Collaboration</h3>
-                    <p>We believe the best results come from diverse perspectives working together towards a common goal.</p>
-                </div>
-                
-                <!-- Value 4 -->
-                <div class="value-card fade-in delay-4">
-                    <div class="value-icon">
-                        <i class="fas fa-bolt"></i>
-                    </div>
-                    <h3>Excellence</h3>
-                    <p>We strive for perfection in everything we do, delivering exceptional quality that exceeds expectations.</p>
-                </div>
+      <div class="container">
+        <h2 class="fade-in">Our Core Values</h2>
+        <div class="values-grid">
+          <!-- Value 1 -->
+          <div class="value-card fade-in delay-1">
+            <div class="value-icon">
+              <i class="fas fa-lightbulb"></i>
             </div>
+            <h3>Innovation</h3>
+            <p>
+              We leverage technology to deliver smarter, faster, and more
+              convenient solutions for modern household service needs.
+            </p>
+          </div>
+
+          <!-- Value 2 -->
+          <div class="value-card fade-in delay-2">
+            <div class="value-icon">
+              <i class="fas fa-hand-holding-heart"></i>
+            </div>
+            <h3>Integrity</h3>
+            <p>
+              We ensure transparency, trust, and accountability in every
+              customer interaction and professional engagement we facilitate.
+            </p>
+          </div>
+
+          <!-- Value 3 -->
+          <div class="value-card fade-in delay-3">
+            <div class="value-icon">
+              <i class="fas fa-users"></i>
+            </div>
+            <h3>Collaboration</h3>
+            <p>
+              We work hand-in-hand with service professionals and customers to
+              create a seamless, reliable service experience.
+            </p>
+          </div>
+
+          <!-- Value 4 -->
+          <div class="value-card fade-in delay-4">
+            <div class="value-icon">
+              <i class="fas fa-bolt"></i>
+            </div>
+            <h3>Excellence</h3>
+            <p>
+              We strive for the highest quality in every service, continuously
+              improving through feedback, training, and dedication.
+            </p>
+          </div>
         </div>
+      </div>
     </section>
-    
+
     <!-- CTA Section -->
     <section class="cta">
-        <div class="container fade-in delay-1">
-            <h2>Join Us On Our Journey</h2>
-            <p>We're always looking for talented, passionate individuals to join our team.</p>
-            <a href="#" class="btn">View Open Positions</a>
-        </div>
+      <div class="container fade-in delay-1">
+        <h2>Join Us On Our Journey</h2>
+        <p>
+          We're always looking for talented, passionate individuals to join our
+          team.
+        </p>
+        <a href="#" class="btn">View Open Positions</a>
+      </div>
     </section>
-    
+
     <script>
-        // Simple animation trigger for scroll
-        document.addEventListener('DOMContentLoaded', function() {
-            const animateOnScroll = () => {
-                const elements = document.querySelectorAll('.fade-in');
-                
-                elements.forEach(element => {
-                    const elementPosition = element.getBoundingClientRect().top;
-                    const screenPosition = window.innerHeight / 1.3;
-                    
-                    if (elementPosition < screenPosition) {
-                        element.style.opacity = '1';
-                        element.style.transform = 'translateY(0)';
-                    }
-                });
-            };
-            
-            // Initial check
-            animateOnScroll();
-            
-            // Check on scroll
-            window.addEventListener('scroll', animateOnScroll);
-        });
+      // Simple animation trigger for scroll
+      document.addEventListener("DOMContentLoaded", function () {
+        const animateOnScroll = () => {
+          const elements = document.querySelectorAll(".fade-in");
+
+          elements.forEach((element) => {
+            const elementPosition = element.getBoundingClientRect().top;
+            const screenPosition = window.innerHeight / 1.3;
+
+            if (elementPosition < screenPosition) {
+              element.style.opacity = "1";
+              element.style.transform = "translateY(0)";
+            }
+          });
+        };
+
+        // Initial check
+        animateOnScroll();
+
+        // Check on scroll
+        window.addEventListener("scroll", animateOnScroll);
+      });
     </script>
-</body>
+  </body>
 </html>
