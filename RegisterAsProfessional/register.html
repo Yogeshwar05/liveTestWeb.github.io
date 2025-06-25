@@ -1,0 +1,905 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Join as Professional | Nexture</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <style>
+      :root {
+        --primary: #5e3e30;
+        --secondary: #c4a1a1;
+        --light: #fff9f7;
+        --accent: #ffe4da;
+        --text: #3c2e28;
+      }
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Segoe UI", -apple-system, BlinkMacSystemFont, sans-serif;
+      }
+
+      body {
+        background-color: var(--light);
+        color: var(--text);
+        line-height: 1.6;
+      }
+      nav {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        /* background-color: var(--accent); */
+        background-color: white;
+        padding: 1rem 2rem;
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      }
+      a {
+        text-decoration: none;
+        color: inherit;
+      }
+      .logo {
+        width: 40px;
+        height: 40px;
+        background-color: var(--secondary);
+        margin-right: 0.4rem;
+      }
+      .logo img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+      .navbar-title {
+        color: var(--primary);
+        font-size: 1.8rem;
+        font-family: "Fredoka", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: 600;
+        font-style: normal;
+        margin-bottom: 1px;
+      }
+
+      .continue-booking {
+        background-color: var(--primary);
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 1rem;
+        transition: background-color 0.3s ease;
+      }
+
+      .continue-booking:hover {
+        background-color: var(--secondary);
+      }
+
+      /* Header Section */
+      .hero-section {
+        background: linear-gradient(
+          135deg,
+          var(--accent) 40%,
+          var(--light) 100%
+        );
+        padding: 5rem 2rem;
+        text-align: center;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .deco-circle {
+        position: absolute;
+        border-radius: 50%;
+        opacity: 0.1;
+      }
+
+      .circle-1 {
+        width: 200px;
+        height: 200px;
+        background-color: var(--secondary);
+        top: -50px;
+        right: -50px;
+      }
+
+      .circle-2 {
+        width: 300px;
+        height: 300px;
+        background-color: var(--primary);
+        bottom: -100px;
+        left: -100px;
+      }
+
+      .hero-content {
+        position: relative;
+        max-width: 800px;
+        margin: 0 auto;
+      }
+
+      h1 {
+        font-size: 3rem;
+        color: var(--primary);
+        font-weight: 700;
+        margin-bottom: 1rem;
+      }
+
+      .hero-text {
+        font-size: 1.2rem;
+        max-width: 600px;
+        margin: 0 auto 2rem;
+      }
+
+      /* Benefits Section */
+      .benefits-section {
+        padding: 3rem 0;
+        background-color: white;
+      }
+
+      .benefits-container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 2rem;
+      }
+
+      .section-title {
+        text-align: center;
+        font-size: 2rem;
+        color: var(--primary);
+        margin-bottom: 3rem;
+        position: relative;
+      }
+
+      .section-title:after {
+        content: "";
+        position: absolute;
+        bottom: -15px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 80px;
+        height: 4px;
+        background-color: var(--secondary);
+        border-radius: 2px;
+      }
+
+      .benefits-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 2rem;
+      }
+
+      .benefit-card {
+        background: var(--light);
+        border-radius: 12px;
+        padding: 2rem;
+        text-align: center;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        transition: transform 0.3s ease;
+      }
+
+      .benefit-card:hover {
+        transform: translateY(-5px);
+      }
+
+      .benefit-icon {
+        font-size: 2.5rem;
+        color: var(--secondary);
+        margin-bottom: 1.5rem;
+      }
+
+      .benefit-title {
+        font-size: 1.3rem;
+        color: var(--primary);
+        margin-bottom: 1rem;
+        font-weight: 600;
+      }
+
+      /* Form Section */
+      .form-section {
+        padding: 4rem 2rem;
+        background-color: var(--light);
+      }
+
+      .form-container {
+        max-width: 800px;
+        margin: 0 auto;
+        background: white;
+        border-radius: 12px;
+        padding: 3rem;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+        position: relative;
+        overflow: hidden;
+      }
+
+      .form-container:before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 6px;
+        height: 100%;
+        background-color: var(--secondary);
+      }
+
+      .form-title {
+        font-size: 2rem;
+        color: var(--primary);
+        margin-bottom: 2rem;
+        text-align: center;
+      }
+
+      .form-group {
+        margin-bottom: 1.8rem;
+      }
+
+      .form-row {
+        display: flex;
+        gap: 1.5rem;
+        margin-bottom: 1.8rem;
+      }
+
+      .form-col {
+        flex: 1;
+      }
+
+      label {
+        display: block;
+        margin-bottom: 0.7rem;
+        font-weight: 500;
+        color: var(--primary);
+      }
+
+      .label-required:after {
+        content: "*";
+        color: #e63946;
+        margin-left: 4px;
+      }
+
+      input,
+      textarea,
+      select {
+        width: 100%;
+        padding: 14px 16px;
+        border: 2px solid var(--accent);
+        border-radius: 8px;
+        font-size: 1rem;
+        background-color: white;
+        transition: all 0.3s ease;
+      }
+
+      input:focus,
+      textarea:focus,
+      select:focus {
+        outline: none;
+        border-color: var(--secondary);
+        box-shadow: 0 0 0 4px rgba(196, 161, 161, 0.2);
+      }
+
+      textarea {
+        min-height: 120px;
+        resize: vertical;
+      }
+
+      .radio-group {
+        display: flex;
+        gap: 1.5rem;
+        margin-top: 0.5rem;
+      }
+
+      .radio-option {
+        display: flex;
+        align-items: center;
+        gap: 0.7rem;
+      }
+
+      .checkbox-group {
+        display: flex;
+        justify-content: space-between;
+      }
+
+      .checkbox-option {
+        display: flex;
+        align-items: center;
+        gap: 0.7rem;
+        margin-bottom: 0.7rem;
+      }
+
+      .doc-upload {
+        border: 2px dashed var(--accent);
+        padding: 2rem;
+        text-align: center;
+        border-radius: 8px;
+        margin-top: 0.7rem;
+        cursor: pointer;
+        transition: all 0.3s ease;
+      }
+
+      .doc-upload:hover {
+        border-color: var(--secondary);
+        background-color: rgba(255, 228, 218, 0.2);
+      }
+
+      .upload-icon {
+        font-size: 2rem;
+        color: var(--secondary);
+        margin-bottom: 1rem;
+      }
+
+      .upload-text {
+        font-size: 0.9rem;
+        color: var(--text);
+        opacity: 0.8;
+      }
+
+      .btn-submit {
+        background-color: var(--secondary);
+        color: white;
+        border: none;
+        padding: 16px 32px;
+        border-radius: 8px;
+        font-size: 1.1rem;
+        font-weight: 600;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        display: block;
+        width: 100%;
+        margin-top: 2rem;
+      }
+
+      .btn-submit:hover {
+        background-color: var(--primary);
+        transform: translateY(-2px);
+        box-shadow: 0 8px 20px rgba(94, 62, 48, 0.2);
+      }
+
+      /* Success Modal */
+      .modal {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.6);
+        z-index: 1000;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .modal-content {
+        background: white;
+        padding: 3rem;
+        border-radius: 12px;
+        text-align: center;
+        max-width: 500px;
+        width: 90%;
+        position: relative;
+        animation: modalAppear 0.4s ease;
+      }
+
+      @keyframes modalAppear {
+        from {
+          opacity: 0;
+          transform: translateY(30px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      .modal-close {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        font-size: 1.5rem;
+        color: var(--text);
+        cursor: pointer;
+        opacity: 0.6;
+        transition: opacity 0.2s;
+      }
+
+      .modal-close:hover {
+        opacity: 1;
+      }
+
+      .modal-icon {
+        font-size: 4rem;
+        color: #4caf50;
+        margin-bottom: 1.5rem;
+      }
+
+      .modal-title {
+        font-size: 1.8rem;
+        color: var(--primary);
+        margin-bottom: 1.2rem;
+        font-weight: 600;
+      }
+
+      .modal-text {
+        margin-bottom: 2rem;
+        font-size: 1.1rem;
+        line-height: 1.7;
+      }
+
+      .modal-btn {
+        background-color: var(--secondary);
+        color: white;
+        border: none;
+        padding: 14px 28px;
+        border-radius: 8px;
+        font-size: 1rem;
+        font-weight: 500;
+        cursor: pointer;
+        transition: all 0.3s;
+      }
+
+      .modal-btn:hover {
+        background-color: var(--primary);
+        transform: translateY(-2px);
+      }
+      .btn-submit {
+        background-color: var(--secondary);
+        color: white;
+        border: none;
+        padding: 16px 32px;
+        border-radius: 8px;
+        font-size: 1.1rem;
+        font-weight: 600;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        display: block;
+        width: 100%;
+        margin-top: 1.5rem;
+      }
+
+      .btn-submit:hover {
+        background-color: var(--primary);
+        transform: translateY(-2px);
+        box-shadow: 0 5px 15px rgba(94, 62, 48, 0.2);
+      }
+
+      /* Responsive Adjustments */
+      @media (max-width: 768px) {
+        h1 {
+          font-size: 2.5rem;
+        }
+
+        .hero-text {
+          font-size: 1.1rem;
+        }
+
+        .form-row {
+          flex-direction: column;
+          gap: 1.8rem;
+        }
+
+        .form-container {
+          padding: 2rem;
+        }
+
+        .radio-group {
+          flex-direction: column;
+          gap: 0.8rem;
+        }
+      }
+
+      @media (max-width: 480px) {
+        h1 {
+          font-size: 2rem;
+        }
+
+        .form-container {
+          padding: 1.5rem;
+        }
+
+        .modal-content {
+          padding: 2rem 1.5rem;
+        }
+      }
+      .modal {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.6);
+        z-index: 1000;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .modal-content {
+        background: white;
+        padding: 3rem;
+        border-radius: 12px;
+        text-align: center;
+        max-width: 500px;
+        width: 90%;
+        position: relative;
+        animation: modalAppear 0.4s ease;
+        box-shadow: 0 5px 25px rgba(0, 0, 0, 0.2);
+      }
+
+      @keyframes modalAppear {
+        from {
+          opacity: 0;
+          transform: translateY(30px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      .modal-close {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        font-size: 1.5rem;
+        color: var(--text);
+        cursor: pointer;
+        opacity: 0.6;
+        transition: opacity 0.2s;
+      }
+
+      .modal-close:hover {
+        opacity: 1;
+      }
+
+      .modal-icon {
+        font-size: 4rem;
+        color: #4caf50;
+        margin-bottom: 1.5rem;
+      }
+
+      .modal-title {
+        font-size: 1.8rem;
+        color: var(--primary);
+        margin-bottom: 1.2rem;
+        font-weight: 600;
+      }
+
+      .modal-text {
+        margin-bottom: 2rem;
+        font-size: 1.1rem;
+        line-height: 1.7;
+      }
+
+      .modal-btn {
+        background-color: var(--secondary);
+        color: white;
+        border: none;
+        padding: 14px 28px;
+        border-radius: 8px;
+        font-size: 1rem;
+        font-weight: 500;
+        cursor: pointer;
+        transition: all 0.3s;
+      }
+
+      .modal-btn:hover {
+        background-color: var(--primary);
+        transform: translateY(-2px);
+      }
+    </style>
+  </head>
+  <body>
+    <nav>
+      <div style="display: flex; align-items: center">
+        <div class="logo">
+          <img src="../assets/logoicon.png" alt="" />
+        </div>
+        <div class="navbar-title">Nexture</div>
+      </div>
+      <button class="continue-booking">
+        <a id="redirect" href="../index.html">Continue Booking</a>
+      </button>
+    </nav>
+    <!-- Hero Section -->
+    <section class="hero-section">
+      <div class="deco-circle circle-1"></div>
+      <div class="deco-circle circle-2"></div>
+      <div class="hero-content">
+        <h1>Join Nexture as a Professional</h1>
+        <p class="hero-text">
+          Grow your business with India's most trusted home services platform.
+          Earn more, work flexibly, and serve premium clients.
+        </p>
+      </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section class="benefits-section">
+      <div class="benefits-container">
+        <h2 class="section-title">Why Partner With Us?</h2>
+        <div class="benefits-grid">
+          <div class="benefit-card">
+            <div class="benefit-icon">
+              <i class="fas fa-wallet"></i>
+            </div>
+            <h3 class="benefit-title">Higher Earnings</h3>
+            <p>
+              Earn 20-30% more than market rates with our premium clientele and
+              transparent pricing
+            </p>
+          </div>
+
+          <div class="benefit-card">
+            <div class="benefit-icon">
+              <i class="fas fa-user-friends"></i>
+            </div>
+            <h3 class="benefit-title">Guaranteed Work</h3>
+            <p>Regular job allocations based on your skills and availability</p>
+          </div>
+
+          <div class="benefit-card">
+            <div class="benefit-icon">
+              <i class="fas fa-shield-alt"></i>
+            </div>
+            <h3 class="benefit-title">Insurance & Benefits</h3>
+            <p>
+              Accident insurance and special benefits for our top-performing
+              partners
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Form Section -->
+    <section class="form-section">
+      <div class="form-container">
+        <h2 class="form-title">Professional Registration</h2>
+
+        <form
+          id="professionalForm"
+          action="https://formspree.io/f/mwpbwbry"
+          method="POST"
+          enctype="multipart/form-data"
+        >
+          <input
+            type="hidden"
+            name="_subject"
+            value="New Professional Registration"
+          />
+          <input type="hidden" name="_next" value="" />
+
+          <div class="form-row">
+            <div class="form-col">
+              <div class="form-group">
+                <label for="fullName" class="label-required">Full Name</label>
+                <input
+                  type="text"
+                  id="fullName"
+                  name="full_name"
+                  placeholder="Your full name"
+                  required
+                />
+              </div>
+            </div>
+            <div class="form-col">
+              <div class="form-group">
+                <label for="mobile" class="label-required">Mobile Number</label>
+                <input
+                  type="tel"
+                  id="mobile"
+                  name="mobile"
+                  placeholder="10-digit mobile number"
+                  required
+                />
+              </div>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-col">
+              <div class="form-group">
+                <label for="email" class="label-required">Email Address</label>
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  placeholder="Your email address"
+                  required
+                />
+              </div>
+            </div>
+            <div class="form-col">
+              <div class="form-group">
+                <label for="city" class="label-required">City</label>
+                <input
+                  type="text"
+                  id="city"
+                  name="city"
+                  placeholder="Your working city"
+                  required
+                />
+              </div>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="label-required">Service Category</label>
+            <select name="service_category" required>
+              <option value="" disabled selected>
+                Select your service category
+              </option>
+              <option value="Home Cleaning">Home Cleaning</option>
+              <option value="Plumbing">Plumbing</option>
+              <option value="Electrical">Electrical</option>
+              <option value="Carpentry">Carpentry</option>
+              <option value="Appliance Repair">Appliance Repair</option>
+              <option value="Pest Control">Pest Control</option>
+              <option value="Painting">Painting</option>
+              <option value="Beauty Services">Beauty Services</option>
+              <option value="Other">Other</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="experience" class="label-required"
+              >Years of Experience</label
+            >
+            <input
+              type="number"
+              id="experience"
+              name="experience"
+              min="0"
+              max="50"
+              placeholder="e.g. 3"
+              required
+            />
+          </div>
+
+          <div class="form-group">
+            <label class="label-required">Professional Type</label>
+            <div class="radio-group">
+              <div class="radio-option">
+                <input
+                  type="radio"
+                  id="individual"
+                  name="professional_type"
+                  value="Individual"
+                  checked
+                  required
+                />
+                <label for="individual">Individual Professional</label>
+              </div>
+              <div class="radio-option">
+                <input
+                  type="radio"
+                  id="company"
+                  name="professional_type"
+                  value="Company"
+                  required
+                />
+                <label for="company">Service Company</label>
+              </div>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="about">About You (Skills, Specializations)</label>
+            <textarea
+              id="about"
+              name="about"
+              placeholder="Describe your skills, certifications, and areas of expertise"
+            ></textarea>
+          </div>
+
+          <div class="form-group">
+            <label class="label-required">Availability</label>
+            <div class="checkbox-group">
+              <div class="checkbox-option">
+                <input
+                  type="checkbox"
+                  id="fullTime"
+                  name="availability[]"
+                  value="Full Time"
+                  checked
+                />
+                <label for="fullTime">Full Time (8+ hours/day)</label>
+              </div>
+              <div class="checkbox-option">
+                <input
+                  type="checkbox"
+                  id="partTime"
+                  name="availability[]"
+                  value="Part Time"
+                />
+                <label for="partTime">Part Time (Flexible hours)</label>
+              </div>
+              <div class="checkbox-option">
+                <input
+                  type="checkbox"
+                  id="weekends"
+                  name="availability[]"
+                  value="Weekends"
+                />
+                <label for="weekends">Weekends Only</label>
+              </div>
+            </div>
+          </div>
+          <button type="submit" class="btn-submit">
+            <span>Submit Request</span>
+            <i class="fas fa-paper-plane" style="margin-left: 8px"></i>
+          </button>
+        </form>
+      </div>
+    </section>
+
+    <!-- Success Modal -->
+    <div class="modal" id="successModal">
+      <div class="modal-content">
+        <span class="modal-close" id="closeModal">&times;</span>
+        <div class="modal-icon">
+          <i class="fas fa-check-circle"></i>
+        </div>
+        <h3 class="modal-title">Application Submitted!</h3>
+        <p class="modal-text">
+          Thank you for your interest in joining Nexture! We've received your
+          application and will review it within 2-3 business days. One of our
+          onboarding specialists will contact you soon.
+        </p>
+        <button class="modal-btn" id="modalOkBtn">Got It</button>
+      </div>
+    </div>
+  </body>
+  <script>
+    // Form submission handling with modal display
+    document
+      .getElementById("professionalForm")
+      .addEventListener("submit", function (e) {
+        e.preventDefault();
+
+        // Create hidden iframe for silent submission
+        const iframe = document.createElement("iframe");
+        iframe.style.display = "none";
+        iframe.name = "hidden-form-submit";
+        document.body.appendChild(iframe);
+
+        // Set form target to iframe
+        this.target = "hidden-form-submit";
+
+        // Show success modal
+        document.getElementById("successModal").style.display = "flex";
+
+        // Submit the form
+        this.submit();
+
+        // Reset form after submission
+        setTimeout(() => {
+          this.reset();
+          document.body.removeChild(iframe);
+        }, 1000);
+      });
+
+    // Close modal handlers
+    document
+      .getElementById("closeModal")
+      .addEventListener("click", function () {
+        document.getElementById("successModal").style.display = "none";
+      });
+
+    document
+      .getElementById("modalOkBtn")
+      .addEventListener("click", function () {
+        document.getElementById("successModal").style.display = "none";
+      });
+
+    // Close modal when clicking outside content
+    window.addEventListener("click", function (event) {
+      const modal = document.getElementById("successModal");
+      if (event.target === modal) {
+        modal.style.display = "none";
+      }
+    });
+  </script>
+</html>

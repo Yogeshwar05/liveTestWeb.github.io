@@ -1,0 +1,13 @@
+@media (max-width: 768px) {
+        h1 {
+          font-size: 2.2rem;
+        }
+
+        .steps-container {
+          flex-direction: column;
+        }
+
+        .form-container {
+          padding: 1.5rem;
+        }
+      }
