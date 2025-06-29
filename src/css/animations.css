@@ -1,0 +1,66 @@
+@keyframes fadeSlideUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.fade-anime {
+  opacity: 0;
+}
+.fade-anime.visible-1 {
+  animation: fade 1.2s ease-out forwards;
+}
+@keyframes fadeInLeftRight {
+  from {
+    opacity: 0;
+    transform: translateX(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.fadeInLeftRight {
+  opacity: 0;
+  transform: translateX(-40px);
+}
+
+.fadeInLeftRight.visible-1 {
+  animation: fadeInLeftRight 1.5s ease-out forwards;
+}
+
+.fadeUp {
+  opacity: 0;
+  transform: translateY(40px);
+}
+
+/* Animate in when scrolled into view */
+.fadeUp.visible-1 {
+  animation: fadeSlideUp 0.8s ease-out forwards;
+}
+
+/* ✅ Zoom effect on hover */
+.fadeUp.visible-1:hover {
+  transform: scale(1.03); /* Slight zoom */
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.12);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.inner-card:hover {
+  transform: scale(1.1);
+  transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}

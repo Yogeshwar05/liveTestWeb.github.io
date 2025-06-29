@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Easy Returns & Refunds | Nexture</title>
+    <link rel="icon" href="../../assets/favicon.ico" type="image/x-icon" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/responsive.css" />
+    <link rel="stylesheet" href="../nav.css">
+
+  </head>
+  <body>
+    <nav>
+      <div style="display: flex; align-items: center">
+        <div class="logo">
+          <img src="../../assets/logoicon.png" alt="" />
+        </div>
+        <div class="navbar-title">Nexture</div>
+      </div>
+      <button class="continue-booking">
+        <a id="redirect" href="../../index.html">Continue Booking</a>
+      </button>
+    </nav>
+    <!-- Header Section -->
+    <header class="page-header">
+      <div class="circle-deco circle-1"></div>
+      <div class="circle-deco circle-2"></div>
+      <div class="container">
+        <h1>Easy Returns & Refunds</h1>
+        <p class="subtitle">
+          Hassle-free return process for all your orders. Get your refund within
+          5-7 business days after approval.
+        </p>
+      </div>
+    </header>
+
+    <!-- Main Content -->
+    <div class="container">
+      <!-- Steps Section -->
+      <div class="steps-container">
+        <div class="step">
+          <div class="step-icon">
+            <i class="fas fa-box-open"></i>
+          </div>
+          <h3 class="step-title">1. Share Your Concern</h3>
+          <p>
+            Let us know what went wrong — your feedback helps us improve and serve you better.
+          </p>
+        </div>
+
+        <div class="step">
+          <div class="step-icon">
+            <i class="fas fa-truck"></i>
+          </div>
+          <h3 class="step-title">2. We’ll Review & Resolve</h3>
+          <p>Our team investigates and ensures fair resolution, keeping your comfort first.</p>
+        </div>
+
+        <div class="step">
+          <div class="step-icon">
+            <i class="fas fa-money-bill-wave"></i>
+          </div>
+          <h3 class="step-title">3. Get Your Refund</h3>
+          <p>Once approved, your refund is processed within 5–7 business days — simple and transparent</p>
+        </div>
+      </div>
+
+      <!-- Form Section -->
+      <div class="form-container">
+        <h2 class="form-title">Return/Refund Request Form</h2>
+
+        <form
+          id="refundForm"
+          action="https://formspree.io/f/xwpbwbpj"
+          method="POST"
+        >
+          <input type="hidden" name="_next" value="" />
+
+          <div class="form-group">
+            <label for="name">Full Name</label>
+            <input
+              type="text"
+              id="name"
+              name="name"
+              placeholder="Enter your full name"
+              required
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="email">Email Address</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="Enter your email"
+              required
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="phone">Phone Number</label>
+            <input
+              type="tel"
+              id="phone"
+              name="phone"
+              placeholder="Enter your phone number"
+              required
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="order">Order Number</label>
+            <input
+              type="text"
+              id="order"
+              name="order"
+              placeholder="Enter order number"
+              required
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="reason">Reason for Return/Refund</label>
+            <select id="reason" name="reason" required>
+              <option value="" disabled selected>Select a reason</option>
+              <option value="Defective Product">Service Not Provided</option>
+              <option value="Wrong Item">Unsatisfactory Service Quality</option>
+              <option value="Not Satisfied">Professional Didn't Arrive</option>
+              <option value="Changed Mind">
+                Incomplete or Partial Service
+              </option>
+              <option value="Changed Mind">
+                Overcharged or Incorrect Billing
+              </option>
+              <option value="Other">Other</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="details">Additional Details</label>
+            <textarea
+              id="details"
+              name="details"
+              placeholder="Please describe the issue or reason for return in detail"
+            ></textarea>
+          </div>
+
+          <button type="submit" class="btn-submit">
+            <span>Submit Request</span>
+            <i class="fas fa-paper-plane" style="margin-left: 8px"></i>
+          </button>
+        </form>
+      </div>
+
+      <!-- Policy Section -->
+      <div class="policy-section">
+        <h3 class="policy-title">Our Return & Refund Policy</h3>
+        <ul class="policy-list">
+          <li class="policy-item">
+            Items must be returned within 30 days of purchase
+          </li>
+          <li class="policy-item">
+            Products should be in original condition with tags attached
+          </li>
+          <li class="policy-item">
+            Refunds will be processed within 5-7 business days after approval
+          </li>
+          <li class="policy-item">
+            Original shipping fees are non-refundable (unless due to our error)
+          </li>
+          <li class="policy-item">
+            Return shipping costs may be deducted from your refund amount
+          </li>
+          <li class="policy-item">
+            Digital services may have different refund eligibility criteria
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Success Modal -->
+    <div class="modal" id="successModal">
+      <div class="modal-content">
+        <div class="modal-icon">
+          <i class="fas fa-check-circle"></i>
+        </div>
+        <h3 class="modal-title">Request Submitted Successfully!</h3>
+        <p class="modal-text">
+          We've received your return/refund request. Our team will review it and
+          contact you within 24-48 hours.
+        </p>
+        <button class="modal-btn" id="closeModal">Got it!</button>
+      </div>
+    </div>
+
+    <script>
+      // Form submission handling
+      document
+        .getElementById("refundForm")
+        .addEventListener("submit", function (e) {
+          e.preventDefault();
+
+          // Create hidden iframe for silent submission
+          const iframe = document.createElement("iframe");
+          iframe.style.display = "none";
+          iframe.name = "hidden-form-submit";
+          document.body.appendChild(iframe);
+
+          // Set form target to iframe
+          this.target = "hidden-form-submit";
+
+          // Show success modal
+          document.getElementById("successModal").style.display = "flex";
+
+          // Submit the form
+          this.submit();
+
+          // Reset form after submission
+          setTimeout(() => {
+            this.reset();
+            document.body.removeChild(iframe);
+          }, 1000);
+        });
+
+      // Close modal button
+      document
+        .getElementById("closeModal")
+        .addEventListener("click", function () {
+          document.getElementById("successModal").style.display = "none";
+        });
+    </script>
+  </body>
+</html>

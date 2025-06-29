@@ -1,47 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Nexture</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>New | Nexture</title>
   <link rel="icon" href="./assets/favicon.ico" type="image/x-icon" />
-  <link rel="stylesheet" href="styles.css" />
-  <link rel="stylesheet" href="responsive_768.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
-  <link rel="stylesheet" href="popup.css" />
-</head>
-
-<body>
-  <header class="navbar scrolled" id="navbar">
-    <div class="logo">
-      <img src="./assets/logoicon.png" alt="Logo" height="47px" />
-      <div class="logoName">Nexture</div>
-    </div>
-    <nav id="nav-links">
-      <a href="#features">Features</a>
-      <a href="#services">Services</a>
-      <a href="#faq">FAQs</a>
-    </nav>
-  </header>
-
-  <section class="hero">
-    <div class="hero-left">
-      <p class="subtitle">INTRODUCING A NEW WAY TO WORK</p>
-      <h1 class="main-heading">
-        Book your Home Services<br />at your Doorstep
-      </h1>
-      <div class="btn-container">
-        <button class="book-btn"><a href="#book">Book Now</a></button>
-        <button class="login-btn" id="contactBtn" type="button">
-          Contact Us
-        </button>
-      </div>
-    </div>
-
-    <!-- contact up popup -->
+    <link rel="stylesheet" href="./src/css/animations.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="./src/css/main_style.css" />
+    <link rel="stylesheet" href="./src/css/responsive.css" />
+    <link rel="stylesheet" href="./src/css/fonts.css" />
+  </head>
+  <body>
+    <!-- contact popup -->
     <section class="popup">
       <div class="modal" id="contactModal">
         <div class="modal-content">
@@ -54,20 +28,20 @@
             <p><i class="fas fa-phone"></i> Phone: +91 90359 57681</p>
             <p>
               <i class="fas fa-map-marker-alt"></i> Address: Manyta Tech Park,
-              Bangalore, India, Karnataka
+              Bangaluru, Karnataka, India
             </p>
           </div>
           <div class="social-links">
-            <a href="#" class="social-link facebook">
+            <a href="https://www.facebook.com/profile.php?id=61577305305191" target="_blank" class="social-link facebook">
               <i class="fab fa-facebook-f"></i>
             </a>
-            <a href="#" class="social-link twitter">
-              <i class="fab fa-twitter"></i>
+            <a href="https://x.com/NextureService" target="_blank" class="social-link twitter">
+              <i class="fab fa-x-twitter"></i>
             </a>
-            <a href="#" class="social-link instagram">
+            <a href="https://www.instagram.com/nextureservice/?utm_source=ig_web_button_share_sheet" target="_blank" class="social-link instagram">
               <i class="fab fa-instagram"></i>
             </a>
-            <a href="#" class="social-link linkedin">
+            <a href="https://www.linkedin.com/in/nexture-service-a2426b371/" target="_blank" class="social-link linkedin">
               <i class="fab fa-linkedin-in"></i>
             </a>
           </div>
@@ -75,234 +49,362 @@
       </div>
     </section>
 
-    <div class="hero-right">
-      <img src="./assets/WhatsApp_Service.png" alt="Chat App UI" class="chat-img" />
-      <img src="./assets/maid-placeholder.png" alt="Maid Illustration" class="maid-img" />
+    <!-- Coming soon popup -->
+
+    <div class="popup-overlay-cs" id="popup-cs">
+      <div class="popup-container-cs">
+        <button class="close-btn-cs" id="close-popup-cs">×</button>
+        <div class="popup-image-cs">
+          <img
+            src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/81bf2df4-d893-40f8-93eb-78dd98b036eb.png"
+            alt="Clock with growth"
+          />
+        </div>
+        <h2 class="popup-title-cs">Coming Soon!</h2>
+        <p class="popup-text-cs">
+          We're working hard to bring you something amazing. Stay tuned for our
+          exciting launch! Follow us for updates:
+        </p>
+        <div class="social-links">
+            <a href="https://www.facebook.com/profile.php?id=61577305305191" target="_blank" class="social-link facebook">
+              <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="https://x.com/NextureService" target="_blank" class="social-link twitter">
+              <i class="fab fa-x-twitter"></i>
+            </a>
+            <a href="https://www.instagram.com/nextureservice/?utm_source=ig_web_button_share_sheet" target="_blank" class="social-link instagram">
+              <i class="fab fa-instagram"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/nexture-service-a2426b371/" target="_blank" class="social-link linkedin">
+              <i class="fab fa-linkedin-in"></i>
+            </a>
+          </div>
+      </div>
     </div>
-  </section>
-  <main>
-    <section class="features-section" id="features">
-      <h2 class="section-heading">
-        Our Commitment to Trust and Reliability?
-      </h2>
 
-      <div class="features-container">
-        <!-- Customer Satisfaction -->
-        <div class="feature-card animate-on-scroll-top">
-          <div class="feature-icon circle-icon">
-            <span class="material-symbols-outlined">sentiment_satisfied</span>
-          </div>
-          <h3>Customer Satisfaction</h3>
-          <div class="line"></div>
-          <p>
-            We complete 98% of services on time, keeping promises and ensuring
-            satisfaction with reliable delivery.
-          </p>
+    <!-- navbar -->
+    <header class="main-navigation-wrap">
+      <div class="nav-container-flex">
+        <div class="brand-identity-group">
+          <img src="./assets/logoicon.png" alt="Logo" class="brand-logo-img" />
+          <span class="brand-name-text">Nexture</span>
         </div>
 
-        <!-- Dedicated Support -->
-        <div class="feature-card animate-on-scroll-top">
-          <div class="feature-icon circle-icon">
-            <span class="material-symbols-outlined">headset_mic</span>
+        <nav class="navigation-menu-items" id="navigationMenu">
+          <a href="#" class="nav-link-item">Home</a>
+          <a href="./public/About/about.html" class="nav-link-item">About Us</a>
+          <a href="#"  class="nav-link-item" id="navBtn">Contact Us</a>
+          <a href="#faq" class="nav-link-item">FAQs</a>
+          <button class="cta-button-nav show-popup-cs">
+            <a href="#book">Book Now</a>
+          </button>
+        </nav>
+
+        <button class="mobile-toggle-btn" id="mobileToggle">
+          <i class="fas fa-bars"></i>
+        </button>
+      </div>
+    </header>
+
+    <!-- Hero section -->
+    <section class="hero" id="home">
+      <div class="hero-left">
+        <p class="subtitle">INTRODUCING A NEW WAY TO WORK</p>
+        <h1 class="main-heading">
+          Book your Home Services<br />at your Doorstep
+        </h1>
+        <div class="btn-container">
+          <button class="book-btn"><a href="#book">Book Now</a></button>
+          <button class="login-btn" id="contactBtn" type="button">
+            Contact Us
+          </button>
+        </div>
+      </div>
+      <div class="hero-right">
+        <img
+          src="./assets/hero-image.png"
+          alt="Chat Image"
+          class="chat-img fade-anime"
+        />
+        <!-- <img src="./assets/maid-image.png" alt="Maid Image" class="maid-img" /> -->
+      </div>
+      <div
+        class="deco-circle"
+        style="
+          position: absolute;
+          top: -4%;
+          left: -10%;
+          width: 30vw;
+          height: 30vw;
+          background-color: rgba(110, 35, 0, 0.236);
+          border-radius: 50%;
+          opacity: 0.1;
+          box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.733);
+        "
+      ></div>
+    </section>
+
+    <!-- Commitment Section -->
+    <section class="commitment-section">
+      <h2 class="section-heading">Our Commitment to Trust and Reliability</h2>
+      <p class="section-subtitle">
+        We pride ourselves on delivering exceptional service through our core
+        values that make us stand out
+      </p>
+
+      <div class="feature-cards">
+        <div class="feature-card fadeUp">
+          <div class="inner-card">
+            <div class="icon-container">😊</div>
+            <h3 class="card-heading">Customer Satisfaction</h3>
+            <div class="card-line"></div>
+            <p class="card-text">
+              We complete 98% of services on time, keeping promises and ensuring
+              satisfaction with reliable delivery.
+            </p>
           </div>
-          <h3>Dedicated Support</h3>
-          <div class="line"></div>
-          <p>
-            Our 24/7 support team assists through chat, phone, and email,
-            always ready to resolve your concerns.
-          </p>
         </div>
 
-        <!-- Quality Control -->
-        <div class="feature-card animate-on-scroll-top">
-          <div class="feature-icon circle-icon">
-            <span class="material-symbols-outlined"> verified </span>
+        <div class="feature-card fadeUp">
+          <div class="inner-card">
+            <div class="icon-container">🎧</div>
+            <h3 class="card-heading">Dedicated Support</h3>
+            <div class="card-line"></div>
+            <p class="card-text">
+              Our 24/7 support team assists through chat, phone, and email,
+              always ready to resolve your concerns.
+            </p>
           </div>
-          <h3>Quality Control</h3>
-          <div class="line"></div>
-          <p>
-            Consistent quality is ensured through regular partner reviews,
-            helping us earn excellent ratings and customer satisfaction.
-          </p>
+        </div>
+
+        <div class="feature-card fadeUp">
+          <div class="inner-card">
+            <div class="icon-container">🛠️</div>
+            <h3 class="card-heading">Quality Control</h3>
+            <div class="card-line"></div>
+            <p class="card-text">
+              Consistent quality is ensured through regular partner reviews,
+              helping us earn excellent ratings and customer satisfaction.
+            </p>
+          </div>
         </div>
       </div>
     </section>
+    <div class="line"></div>
 
-    <section class="services-section" id="services">
-      <div class="services-content">
-        <h2>Your Home, Covered:<br />Explore Our Comprehensive Services</h2>
-        <div class="service-container">
-          <div class="service-box animate-on-scroll">
-            <h3>Cleaning Services</h3>
-            <div class="line"></div>
-            <p>
+    <!-- Services Section -->
+    <section class="services-section">
+      <h1 class="section-title">
+        Your Home, Covered: <br />Explore Our Comprehensive Services
+      </h1>
+      <div class="service-container" id="serviceContainer">
+        <div class="text-col">
+          <div class="service-card fade-anime" id="card1">
+            <h3 class="service-title">Cleaning Services</h3>
+            <p class="service-desc">
               From deep cleaning to regular maintenance and post-renovation
               clean-up, we cover all your home cleanliness needs.
             </p>
           </div>
 
-          <div class="service-box animate-on-scroll">
-            <h3>Repair & Maintenance</h3>
-            <div class="line"></div>
-            <p>
+          <div class="service-card fade-anime" id="card2">
+            <h3 class="service-title">Repair & Maintenance</h3>
+            <p class="service-desc">
               Reliable electricians, plumbers, AC repair specialists, and
               handymen are ready to tackle any household issue.
             </p>
           </div>
 
-          <div class="service-box animate-on-scroll-right">
-            <h3>Beauty & Wellness</h3>
-            <div class="line"></div>
-            <p>
+          <div class="service-card fade-anime" id="card3">
+            <h3 class="service-title">Beauty & Wellness</h3>
+            <p class="service-desc">
               Enjoy professional at-home salon services, relaxing massage
               therapy, and personal grooming tailored to your schedule.
             </p>
           </div>
 
-          <div class="service-box animate-on-scroll-right">
-            <h3>Specialized Services</h3>
-            <div class="line"></div>
-            <p>
+          <div class="service-card fade-anime" id="card4">
+            <h3 class="service-title">Specialized Services</h3>
+            <p class="service-desc">
               We offer a diverse range including pest control, convenient
               laundry pickup, expert appliance repair, and comprehensive
               services.
             </p>
           </div>
+
+          <p class="footer-note">
+            Nexture offers 23 distinct service categories, continually expanding
+            our network to meet your every need.
+          </p>
         </div>
 
-        <p class="note">
-          Nexture offers 23 distinct service categories, continually expanding
-          our network to meet your every need.
-        </p>
-      </div>
-
-      <div class="grid-placeholder animate-on-scroll-top">
-        <!-- <p>A grid image showing images of services providec by our company</p> -->
-        <img class="service-grid-img" src="./assets/Services_grid.png" alt="" />
+        <div class="image-col fade-anime">
+          <img
+            src="./assets/Services_grid.png"
+            alt="Professional home services"
+            class="service-image"
+            id="serviceImage"
+          />
+        </div>
       </div>
     </section>
+    <div class="line"></div>
 
-    <section class="whatsapp-section" id="About">
-      <div class="whatsapp-container">
-        <!-- Left: Square Box -->
-        <div class="chat-phone animate-on-scroll">
-          <img src="./assets/WhatsApp_Service.png" class="phone-screen" alt=" " />
-        </div>
+    <!-- WhatsApp Booking Section -->
+    <section class="page-wrapper-wabooking">
+      <h1 class="heading-wabooking">
+        Experience the Nexture Difference:<br />Seamless WhatsApp Booking
+      </h1>
+      <div
+        class="container-wabooking"
+        role="main"
+        aria-label="WhatsApp Booking Features Section"
+      >
+        <section class="image-wrapper-wabooking" aria-hidden="true">
+          <img
+            src="./assets/our-commitment.png"
+            alt=""
+            class="image-wabooking"
+          />
+        </section>
 
-        <!-- Right: WhatsApp Features -->
-        <div class="whatsapp-features">
-          <h2>
-            Experience the Nexture Difference:<br />Seamless WhatsApp Booking
-          </h2>
-          <div class="feature-container-last">
-            <div class="feature-item animate-on-scroll-right">
-              <span class="icon">💬</span>
-              <div>
-                <h4>Instant Connection</h4>
-                <div class="line"></div>
+        <!-- WhatsApp Booking Features Section -->
+        <section class="content-wabooking">
+          <div class="feature-list-wabooking">
+            <article class="feature-item-wabooking fadeInLeftRight">
+              <div class="feature-icon-wabooking">📲</div>
+              <div class="feature-text-wabooking">
+                <strong>Instant Connection</strong>
                 <p>
                   Book services directly via WhatsApp in under 60 seconds,
                   connecting you to professionals without delay.
                 </p>
               </div>
-            </div>
+            </article>
 
-            <div class="feature-item animate-on-scroll-right">
-              <span class="icon">🛠️</span>
-              <div>
-                <h4>Effortless Process</h4>
-                <div class="line"></div>
+            <article class="feature-item-wabooking fadeInLeftRight">
+              <div class="feature-icon-wabooking">💸</div>
+              <div class="feature-text-wabooking">
+                <strong>Effortless Process</strong>
                 <p>
                   Simply send a message, describe your needs, and get matched
                   with a qualified service provider instantly.
                 </p>
               </div>
-            </div>
+            </article>
 
-            <div class="feature-item animate-on-scroll">
-              <span class="icon">🔔</span>
-              <div>
-                <h4>Real-time Updates</h4>
-                <div class="line"></div>
+            <article class="feature-item-wabooking fadeInLeftRight">
+              <div class="feature-icon-wabooking">🕙</div>
+              <div class="feature-text-wabooking">
+                <strong>Real-time Updates</strong>
                 <p>
                   Receive instant service confirmations and status alerts
-                  directly through your chat, keeping you informed every step
-                  of the way.
+                  directly through your chat, keeping you informed every step of
+                  the way.
                 </p>
               </div>
-            </div>
+            </article>
 
-            <div class="feature-item animate-on-scroll">
-              <span class="icon">🔐</span>
-              <div>
-                <h4>Secure Payments</h4>
-                <div class="line"></div>
+            <article class="feature-item-wabooking fadeInLeftRight">
+              <div class="feature-icon-wabooking">🔐</div>
+              <div class="feature-text-wabooking">
+                <strong>Secure Payments</strong>
                 <p>
-                  Handle transactions securely and conveniently within
-                  WhatsApp or via a trusted payment link, ensuring peace of
-                  mind.
+                  Handle transactions securely and conveniently within WhatsApp
+                  or via a trusted payment link, ensuring peace of mind.
                 </p>
               </div>
-            </div>
+            </article>
+          </div>
+        </section>
+      </div>
+    </section>
+    <div class="line"></div>
+    <!-- FAQ Section -->
+    <div class="faq-wrapper" id="faq">
+      <div class="faq-container">
+        <div class="faq-header">
+          <h1>Frequently Asked Questions</h1>
+          <p>
+            Find answers to common questions about our products, services, and
+            policies below.
+          </p>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">
+            <h3>1. What is a WhatsApp-based service?</h3>
+            <div class="icon"></div>
+          </div>
+          <div class="faq-answer">
+            <p>
+              Our services are managed entirely through WhatsApp—just message
+              us, select your service, and we’ll schedule it instantly for you.
+              .
+            </p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">
+            <h3>2. How can we trust your service?</h3>
+            <div class="icon"></div>
+          </div>
+          <div class="faq-answer">
+            <p>
+              We offer Cash on Delivery and dedicated customer support via call,
+              ensuring a safe and reliable experience every time.
+            </p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">
+            <h3>3. Why should I choose you over other providers?</h3>
+            <div class="icon"></div>
+          </div>
+          <div class="faq-answer">
+            <p>
+              We stand out with fast service, transparent communication, and
+              affordable pricing—delivering quality without the heavy cost.
+            </p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">
+            <h3>4. Which locations you currently serve?</h3>
+            <div class="icon"></div>
+          </div>
+          <div class="faq-answer">
+            <p>
+              At present, we operate exclusively within Banglore city, bringing
+              top-qulity service directly to your doorstep.
+            </p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">
+            <h3>5. How can i contact your team?</h3>
+            <div class="icon"></div>
+          </div>
+          <div class="faq-answer">
+            <p>
+              You can reach us easily through Whatsapp, phone call, or email-our
+              contact details are clearly provided on all platforms.
+              <br>Email: nextureservice@gmail.com <br> Phone: +91 90359 57681
+            </p>
           </div>
         </div>
       </div>
-    </section>
-
-    <section class="faq-section" id="faq">
-      <h2>Frequently asked questions</h2>
-
-      <div class="faq-card animate-on-scroll">
-        <div class="faq-question">1. What is a WhatsApp-based service?</div>
-        <div class="faq-answer">
-          Our services are managed entirely through WhatsApp—just message us,
-          select your service, and we’ll schedule it instantly for you.
-        </div>
-      </div>
-
-      <div class="faq-card animate-on-scroll-right">
-        <div class="faq-question">2. How can we trust your service?</div>
-        <div class="faq-answer">
-          We offer Cash on Delivery and dedicated customer support via call,
-          ensuring a safe and reliable experience every time.
-        </div>
-      </div>
-
-      <div class="faq-card animate-on-scroll">
-        <div class="faq-question">
-          3. Why should I choose you over other providers?
-        </div>
-        <div class="faq-answer">
-          We stand out with fast service, transparent communication, and
-          affordable pricing—delivering quality without the heavy cost.
-        </div>
-      </div>
-
-      <div class="faq-card animate-on-scroll-right">
-        <div class="faq-question">
-          4. Which locations you currently serve?
-        </div>
-        <div class="faq-answer">
-          At present, we operate exclusively within Banglore city, bringing
-          top-qulity service directly to your doorstep.
-        </div>
-      </div>
-
-      <div class="faq-card animate-on-scroll">
-        <div class="faq-question">5. How can I contact your team?</div>
-        <div class="faq-answer">
-          You can reach us easily through Whatsapp, phone call, or email-our
-          contact details are clearly provided on all platforms.
-          <br />Email:example@gmal.com <br />
-          Phone:+91 98765431
-        </div>
-      </div>
-    </section>
-
-    <section class="book-now-section" id="book">
-      <div class="book-now-container">
-        <div class="book-now-left">
-          <h2>Ready for instant home service?<br />Book Now!</h2>
+    </div>
+    <div class="line"></div>
+    <!-- Book now section -->
+    <div class="cta-wrapper" id="book">
+      <div class="cta-container">
+        <div class="cta-left">
+          <h1>Ready for instant home service?<br />Book Now!</h1>
           <p>
             Simplify daily tasks with Nexture—trusted home services like
             cleaning, repairs, and grooming, all bookable directly through
@@ -313,63 +415,77 @@
             service, confirm your slot, and enjoy smooth, reliable service at
             your doorstep.
           </p>
-          <a href="https://wa.me/message/HIXFV5J4UD5PP1" class="book-now-button">Book Your Service Now <span
-              class="aro">🡲</span></a>
+          <a href="https://wa.me/message/HIXFV5J4UD5PP1" target="_blank" class="cta-button"
+            >Book Your Service Now →</a
+          >
         </div>
-        <div class="book-now-right">
-          <img src="./assets/qrcode.png" alt="Phone Image" class="book-now-img" />
+        <div class="cta-right">
+          <div class="qr-code">
+            <img
+              src="./assets/qrcode-1.png"
+              alt="QR Code Placeholder"
+            />
+          </div>
         </div>
       </div>
-    </section>
-  </main>
-
-  <footer class="footer" id="footer">
-    <div class="footer-container">
-        <div class="footer-column">
-            <h2>Nexture</h2>
-            <h3>Company</h3>
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="./About/about.html">About Us</a></li>
-                <li><a href="#faq">FAQs</a></li>
-                <li><a href="./Privacy/policies.html">Privacy Policy</a></li>
-                <li><a href="./TnC/TnC.html">Terms and Conditions</a></li>
-            </ul>
-        </div>
-
-        <div class="footer-column1">
-            <h3>For Customers</h3>
-            <ul>
-                <li><a href="#" id="anotherBtn">Contact Us</a></li>
-                <li><a href="./ReturnAndRefund/return.html">Return and Refund</a></li>
-            </ul>
-        </div>
-
-        <div class="footer-column1">
-            <h3>For Providers</h3>
-            <ul>
-                <li><a href="./RegisterAsProfessional/register.html">Register as Professional</a></li>
-            </ul>
-        </div>
-
-        <div class="footer-column1">
-            <h3>Social Links</h3>
-            <div class="social-icons-footer">
-                <a class="social-links-footer" href="https://www.linkedin.com/in/nexture-service-a2426b371/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
-                <a class="social-links-footer" href="https://www.instagram.com/nextureservice/?utm_source=ig_web_button_share_sheet" target="_blank"><i class="fab fa-instagram"></i></a>
-                <a class="social-links-footer" href="https://x.com/NextureService" target="_blank"><i class="fab fa-x-twitter"></i></a>
-                <a class="social-links-footer" href="https://www.facebook.com/profile.php?id=61577305305191" target="_blank"><i class="fab fa-facebook-f"></i></a>
-            </div>
-        </div>
     </div>
 
-    <div class="footer-bottom">
-        <i class="far fa-copyright"></i>
-        Copyright 2025 Nexture All Rights Reserved.
-    </div>
-</footer>
+    <!-- Footer -->
+    <footer class="footer" id="footer">
+      <h2 class="footer-title">Nexture</h2>
+      <div class="footer-container">
+        <div class="footer-col">
+          <div class="footer-heading">Company</div>
+          <ul class="footer-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="./public/About/about.html">About Us</a></li>
+            <li><a href="./public/Privacy/policies.html">Privacy Policy</a></li>
+            <li><a href="./public/TnC/TnC.html">Terms and Conditions</a></li>
+            <li><a href="./public/ReturnAndRefund/return.html">Return & Refund</a></li>
+          </ul>
+        </div>
 
-</body>
-<script src="script.js"></script>
+        <div class="footer-col">
+          <div class="footer-heading">For Customers</div>
+          <ul class="footer-links">
+            <li><a href="#footer" id="show-popup-cs-3">Nexture Reviews</a></li>
+            <li><a href="#footer" id="show-popup-cs-2">Categories Near You</a></li>
+            <li><a href="#footer" id="show-popup-cs-1">Blog</a></li>
+            <li><a href="#footer" id="anotherBtn">Contact Us</a></li>
+          </ul>
+        </div>
 
+        <div class="footer-col">
+          <div class="footer-heading">Professionals</div>
+          <ul class="footer-links">
+            <li><a href="./public/RegisterAsProfessional/register.html">Register as Professional</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <div class="footer-heading">Stay Connected</div>
+          <div class="social-links">
+            <a href="https://www.facebook.com/profile.php?id=61577305305191" target="_blank" class="social-link facebook">
+              <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="https://x.com/NextureService" target="_blank" class="social-link twitter">
+              <i class="fab fa-x-twitter"></i>
+            </a>
+            <a href="https://www.instagram.com/nextureservice/?utm_source=ig_web_button_share_sheet" target="_blank" class="social-link instagram">
+              <i class="fab fa-instagram"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/nexture-service-a2426b371/" target="_blank" class="social-link linkedin">
+              <i class="fab fa-linkedin-in"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        © Copyright 2025 Nexture. All Rights Reserved.
+      </div>
+    </footer>
+  </body>
+  <script src="./src/script/animation.js"></script>
+  <script src="./src/script/main_script.js"></script>
 </html>

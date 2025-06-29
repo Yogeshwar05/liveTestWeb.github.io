@@ -1,0 +1,293 @@
+@media (max-width: 900px) {
+    .nav-container-flex {
+        padding: 1rem 5%;
+    }
+
+    .navigation-menu-items {
+        position: fixed;
+        top: 80px;
+        left: -100%;
+        width: 100%;
+        height: calc(100vh - 80px);
+        background: var(--nav-light);
+        flex-direction: column;
+        gap: 2.5rem;
+        padding: 3rem 0;
+        transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+        box-shadow: inset 0 10px 15px -15px rgba(0, 0, 0, 0.1);
+    }
+
+    .navigation-menu-items.active {
+        left: 0;
+    }
+
+    .mobile-toggle-btn {
+        display: block;
+    }
+
+    .cta-button-nav {
+        margin-left: 0;
+        margin-top: 1rem;
+    }
+
+    .container-wabooking {
+        flex-direction: column;
+        margin-top: 2rem;
+    }
+
+    .image-wrapper-wabooking {
+        width: 100%;
+        height: 320px;
+        margin-bottom: 2rem;
+    }
+
+    .content-wabooking {
+        width: 100%;
+        padding: 2rem 1.5rem;
+        border-radius: 1.25rem;
+    }
+
+    .feature-text-wabooking {
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    .commitment-section {
+        padding: 3rem 1rem;
+    }
+
+    .section-heading {
+        font-size: 2rem;
+    }
+
+    .feature-cards {
+        grid-template-columns: 1fr;
+    }
+
+    .service-container {
+        flex-direction: column;
+    }
+
+    .image-col {
+        margin-top: 2rem;
+        justify-content: center;
+    }
+
+    .service-card {
+        width: calc(50% - 1rem);
+        margin: 0.5rem;
+    }
+
+    .faq-header h1 {
+        font-size: 2rem;
+    }
+
+    .faq-question h3 {
+        font-size: 1.1rem;
+    }
+
+    .cta-container {
+        flex-direction: column;
+        padding: 1rem;
+    }
+
+    .cta-left,
+    .cta-right {
+        padding: 20px;
+    }
+
+    .cta-left h1 {
+        font-size: 1.5rem;
+    }
+
+    .cta-button {
+        width: 100%;
+    }
+
+    .footer-container {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+
+    .line {
+        display: block;
+        height: 1rem;
+        width: 100%;
+        background-color: var(--dusty-rose);
+        opacity: 0.2;
+    }
+
+    /* Hero section  */
+    .hero {
+        padding: 1rem;
+        justify-content: center;
+        align-items: center;
+
+    }
+
+    .hero-left {
+        max-width: 95%;
+        padding: 1rem 0;
+        text-align: center;
+    }
+
+    .hero-right {
+        display: none;
+    }
+
+    .main-heading {
+        line-height: 3rem;
+        font-size: 2.8rem;
+    }
+
+    .book-btn {
+        font-size: 1rem;
+        padding: 1rem;
+    }
+
+    .btn-container {
+        align-items: center;
+        justify-content: center;
+    }
+
+    .login-btn {
+        padding: 1rem;
+    }
+
+    /* commitment section */
+    .commitment-section {
+        margin-top: 4rem;
+    }
+
+    .feature-card {
+        /* width: calc(50vw - 2rem); */
+        padding: 1rem;
+    }
+
+    .card-line {
+        height: 3px;
+        border-radius: 10px;
+    }
+
+    /* servicec section */
+    .text-col {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    .section-subtitle{
+        font-size: 1rem;
+    }
+    .services-section {
+        padding: 0 1rem;
+    }
+
+    .service-card {
+        padding: 0.8rem;
+    }
+
+    .service-card h3 {
+        text-align: center;
+        font-weight: 700;
+    }
+
+    .service-card p {
+        font-size: 1rem;
+        text-align: center;
+    }
+
+    #card2,
+    #card4 {
+        border: none;
+        border-right: 4px solid var(--dusty-rose);
+    }
+
+    .image-col {
+        margin-top: 0rem;
+    }
+
+    .service-image {
+        margin-top: 0rem;
+    }
+
+    .service-container {
+        flex-direction: column-reverse;
+    }
+
+    /* Whatsapp Booking */
+    .heading-wabooking {
+        width: calc(100vw - 3rem);
+    }
+
+    .heading-wabooking {
+        font-size: clamp(1.8rem, 3vw, 2.5rem);
+        text-align: center;
+        margin: 1.5rem auto;
+    }
+
+    .feature-list-wabooking {
+        gap: 2rem;
+    }
+
+    .container-wabooking {
+        margin-bottom: 2rem;
+        gap: 1rem;
+    }
+
+    /* FAQ Section */
+    .faq-wrapper {
+        padding: 2rem 2rem;
+        padding-bottom: 1rem;
+    }
+
+    /* CTA section */
+    .cta-wrapper {
+        padding: 1rem 0.5rem;
+    }
+
+    .cta-left h1 {
+        font-size: clamp(1.8rem, 3vw, 2.5rem);
+    }
+
+    .cta-left p {
+        font-weight: 600;
+    }
+
+    .qr-code {
+        display: none;
+    }
+
+    /* Footer section */
+    .footer {
+        padding: 2rem 1rem;
+    }
+
+    .footer-container {
+        grid-template-columns: 1fr;
+    }
+
+    /* Animation */
+
+    @keyframes fadeInLeftRight {
+        from {
+            opacity: 0;
+            transform: translateY(40px);
+        }
+
+        to {
+            opacity: 1;
+            transform: translateX(0);
+        }
+    }
+
+    .fadeInLeftRight {
+        opacity: 0;
+        transform: translateY(-40px);
+    }
+
+    .fadeInLeftRight.visible-1 {
+        animation: fadeInLeftRight 1.5s ease-out forwards;
+    }
+}
