@@ -24,13 +24,14 @@ html {
 }
 
 :root {
-    --primary-bg: #FEF4F1;
-    --card-bg: #FFF9F7;
+    /* --primary-bg: #FEF4F1; */
+    --primary-bg: #FFF;
+    --card-bg: #ffffff;
     --accent-color: #D68B63;
     --dark-text: #321F15;
     --light-text: #5E3E30;
     --neutral-text: #333333;
-    --shadow: 0 6px 30px rgba(216, 139, 99, 0.12);
+    --shadow: 0 6px 20px rgba(128, 49, 0, 0.1);
     --transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
 
     --dusty-rose: #C4A1A1;
@@ -528,7 +529,7 @@ body {
 }
 
 .subtitle {
-    font-size: 1.1rem;
+    font-size: 1.2rem;
     font-family: "Sofia Sans Semi Condensed", sans-serif;
     font-optical-sizing: auto;
     font-weight: 700;
@@ -539,9 +540,9 @@ body {
 }
 
 .main-heading {
-    font-size: 3.3rem;
-    font-family: "Philosopher", sans-serif;
-    font-weight: 400;
+    font-size: 3rem;
+    font-family: 'Georgia', serif;
+    font-weight: 500;
     font-style: normal;
     line-height: 1.3;
     margin-bottom: 2rem;
@@ -587,9 +588,9 @@ body {
     content: '';
     position: absolute;
     top: 10%;
-    left: 10%;
-    width: 80%;
-    height: 80%;
+    left: -55%;
+    width: 22rem;
+    height: 22rem;
     background: radial-gradient(circle, rgba(255, 149, 149, 0.988) 4%, transparent 70%);
     border-radius: 90%;
     filter: blur(20px);
@@ -597,21 +598,21 @@ body {
 }
 
 .chat-img {
-    width: 75%;
+    width: 17rem;
     display: block;
     position: relative;
     z-index: 1;
     border-radius: 1rem;
-    left: 20%;
+    left: -40%;
     filter: drop-shadow(0 15px 10px rgba(0, 0, 0, 0.25));
-    filter: brightness(1.08);
+    filter: brightness(1.03);
 }
 
 .maid-img {
     position: absolute;
-    bottom: -6%;
-    left: 55%;
-    width: 20%;
+    bottom: -10%;
+    left: 48%;
+    width: 47%;
     height: auto;
     z-index: 2;
 }
@@ -633,7 +634,7 @@ body {
     display: inline-block;
 }
 
-.section-heading:after {
+/* .section-heading:after {
     content: '';
     position: absolute;
     bottom: -10px;
@@ -642,7 +643,7 @@ body {
     height: 4px;
     background: linear-gradient(90deg, var(--accent-color), rgba(214, 139, 99, 0.2));
     border-radius: 2px;
-}
+} */
 
 .section-subtitle {
     font-weight: 300;
@@ -713,7 +714,7 @@ body {
 }
 
 .card-heading {
-    font-weight: 600;
+    font-weight: 500;
     font-size: 1.5rem;
     color: var(--dark-text);
     margin: 1rem 0;
@@ -726,15 +727,16 @@ body {
     background: #FFDFCE;
     border-radius: 2px;
     margin: 0 auto;
+    margin-bottom: 3px;
     position: relative;
     bottom: 3%;
 }
 
 .card-text {
-    font-weight: 300;
+    font-weight: 400;
     color: var(--neutral-text);
-    font-size: 1rem;
-    line-height: 1.7;
+    font-size: 1.1rem;
+    line-height: 1.5;
     max-width: 280px;
     margin: 0 auto;
 }
@@ -769,7 +771,7 @@ body {
 }
 
 .section-title {
-    font-size: clamp(1.8rem, 3vw, 2.5rem);
+    font-size: clamp(1.8rem, 3vw, 2.4rem);
     font-weight: 700;
     margin-bottom: 2.5rem;
     line-height: 1.3;
@@ -863,10 +865,10 @@ body {
     flex: 1 1 350px;
     border-radius: 1.75rem;
     height: 480px;
-    box-shadow: var(--shadow);
+    /* box-shadow: var(--soft-shadow); */
     position: relative;
     overflow: hidden;
-    filter: drop-shadow(0 6px 15px rgba(182, 112, 80, 0.4));
+    /* filter: drop-shadow(0 6px 15px rgba(182, 112, 80, 0.4)); */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -874,15 +876,18 @@ body {
 }
 
 .image-wrapper-wabooking img {
-    height: 100%;
+    height: 95%;
     object-fit: cover;
     border-radius: 1.75rem;
     transition: var(--transition);
+    filter: drop-shadow(0 4px 20px rgba(94, 62, 48, 0.2));
+    z-index: 80;
+
 }
 
 .image-wrapper-wabooking img:hover {
-    transform: scale(1.05) rotate(1.2deg);
-    filter: brightness(105%);
+    transform: scale(1.1) rotate(-1.02deg);
+    filter: brightness(102%);
 }
 
 .content-wabooking {
