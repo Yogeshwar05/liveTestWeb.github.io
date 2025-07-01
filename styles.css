@@ -934,7 +934,7 @@ h2 {
   margin-top: 3rem;
     background-color: var(--light-text);
     color: var(--nav-light);
-    padding: 2rem 2rem;
+    padding: 1rem 2rem;
     box-shadow: var(--soft-shadow);
     border-top: 1px solid var(--salmon);
 }
@@ -1042,7 +1042,7 @@ h2 {
     color: var(--pale-pink);
     margin-bottom: 2rem;
     letter-spacing: 1px;
-    margin: 3rem auto;
+    margin: 1rem auto;
     margin-top: 0;
 }
 
@@ -1057,7 +1057,7 @@ h2 {
 }
 
 .footer-bottom {
-    margin-top: 3rem;
+    margin-top: 1rem;
     padding-top: 2rem;
     border-top: 1px solid var(--salmon);
     text-align: center;

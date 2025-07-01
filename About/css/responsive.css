@@ -72,14 +72,25 @@
         height: 3px;
         bottom: -8px;
     }
-
+    .praragraph-container p {
+        font-size: 0.9rem;
+    }
+    .praragraph-container{
+        max-width: 80vw;
+    }
     .hero,
     .team,
     .values,
     .cta {
         padding: 2rem 0;
     }
-
+.team-member{
+    height: 300px;
+    width: 250px;
+}
+.member-info{
+    padding: 0.5rem;
+}
     .team-grid,
     .values-grid {
         grid-template-columns: 1fr;
