@@ -49,6 +49,7 @@ a {
 .logo {
     width: 40px;
     height: 40px;
+    background-color: var(--secondary);
     margin-right: 0.4rem;
 }
 .logo img {
@@ -151,7 +152,10 @@ p {
     display: flex;
     align-items: flex-start;
     flex-direction: column;
-    max-width: 67vw;
+    max-width: 70vw;
+}
+.praragraph-container p{
+    font-weight: 500;
 }
 /* Team Section */
 .team {
@@ -189,10 +193,11 @@ p {
 }
 
 .member-img img {
-    width: 200px;
-    height: 200px;
+    width: 50%;
+    height: 80%;
     object-fit: cover;
-    border-radius: 30px;
+    border-radius: 50%;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
 .member-info {
