@@ -87,6 +87,8 @@
 .team-member{
     height: 300px;
     width: 250px;
+    justify-self: center;
+
 }
 .member-info{
     padding: 0.5rem;
